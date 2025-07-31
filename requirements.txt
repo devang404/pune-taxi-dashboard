@@ -1,0 +1,7 @@
+kafka-python
+faker
+psycopg2-binary
+streamlit-folium
+pandas
+plotly
+folium 

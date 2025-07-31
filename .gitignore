@@ -1,0 +1,17 @@
+# Hide secrets
+.env
+
+# Hide OS files
+__pycache__/
+*.pyc
+.DS_Store
+
+# Hide environment and data
+venv/
+*.db
+*.sqlite
+*.log
+
+# Hide generated files
+visualization/trips.csv.env.local 
+trips.csv 

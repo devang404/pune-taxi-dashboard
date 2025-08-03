@@ -109,8 +109,3 @@ pune-taxi-dashboard/
 ```
 
 
-## Demo
-
-
-
-https://pune-taxi-dashboard-az6exed6euatrhc6h9fe6e.streamlit.app/

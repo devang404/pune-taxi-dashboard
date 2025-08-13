@@ -111,7 +111,13 @@ pune-taxi-dashboard/
 
 ## Demo
 
-
+Insert gif or link to demo
 
 https://pune-taxi-dashboard-ubjosvdtchrhzwzvzxjnt5.streamlit.app/
+## Screenshots
+
+
+![Dashboard Overview](https://github.com/devang404/pune-taxi-dashboard/blob/main/dashboard-overview.png)
+
+![heatmap](https://github.com/devang404/pune-taxi-dashboard/blob/main/heatmap-trips.png)
 

@@ -28,11 +28,17 @@ def generate_trip():
     drop = random.choice([loc for loc in pune_locations if loc != pickup])
     distance = round(random.uniform(3, 15), 2)  # km
     fare = round(35 + (distance * random.uniform(10, 15)), 2)  # Rs
+
+
+    #generate a date within the past 60 days
+    random_days=random.randint(0,60)
+    random_minutes=random.randint(0,1440)
+
     return {
         "trip_id": f"TRIP-{random.randint(100000, 999999)}",
         "pickup_location": pickup,
         "drop_location": drop,
-        "pickup_time": (datetime.now() - timedelta(minutes=random.randint(0, 1440))).isoformat(),
+        "pickup_time": (datetime.now()-timedelta(days=random_days,minutes=random_minutes)).isoformat(),
 
 
         "distance_km": distance,

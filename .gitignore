@@ -12,6 +12,8 @@ venv/
 *.sqlite
 *.log
 
-# Hide generated files
-visualization/trips.csv.env.local 
-trips.csv 
+# Hide generated files (Kafka output)
+visualization/trips.csv
+
+# Do NOT ignore the sample file for public deployment
+# (sample_trips.csv will stay in the repo)

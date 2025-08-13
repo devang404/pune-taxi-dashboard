@@ -7,7 +7,7 @@ from folium.plugins import HeatMap
 from streamlit_folium import folium_static
 from datetime import datetime
 import base64
-
+import os
 
 st.set_page_config(page_title="🚖 Pune Taxi Intelligence Dashboard", layout="wide")
 
@@ -46,7 +46,13 @@ st.markdown("""
 # Load data from CSV instead of PostgreSQL for deployment
 @st.cache_data(ttl=60)
 def load_data():
-    df = pd.read_csv("visualization/trips.csv")
+    kafka_csv="visualization/trips.csv"
+    sample_csv="visualization/sample_trips.csv"
+    if os.path.exists(kafka_csv):
+        df=pd.read_csv(kafka_csv)
+    else:
+        df=pd.read_csv(sample_csv)
+    
     df['pickup_time'] = pd.to_datetime(df['pickup_time'])
     df['hour'] = df['pickup_time'].dt.hour
     return df
